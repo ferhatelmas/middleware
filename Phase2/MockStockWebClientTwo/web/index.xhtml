@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>MockStock.</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="css/design.css" />
+        <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon"/>
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="js/mockstock.js"></script>
+    </head>
+    <body id="mockstock">
+        <h:outputText value="#{param['email']}" />
+        <div id="wrapper">
+            <ui:insert name="headersimple" >
+                <ui:include src="headersimple.xhtml" />
+            </ui:insert>
+            <div id="content">
+                <div id="welcomeimg">
+                    <img alt="Wallstreet NYC" src="img/wallstreet.jpg"/>
+                </div>
+                <div id="home">
+                    <div id="login">
+                        <h:messages globalOnly="true" errorClass="errorfull"/>
+                        <p class="errorhome"><h:message for="email"/></p>
+                        <p class="errorhome"><h:message for="password"/></p>
+                        <h:form id="loginform">                           
+                            <dl>
+                                <dt>
+                                    <label for="email">Email *</label>
+                                </dt>
+                                <dd>
+                                    <h:inputText id="email" value="#{traderManager.email}">
+                                        <f:validator validatorId="mockstock.helper.EmailValidator" />
+                                    </h:inputText>
+                                </dd>
+                                <dt>
+                                    <label for="password">Password *</label>
+                                </dt>
+                                <dd>
+                                    <h:inputSecret id="password" value="#{traderManager.password}">
+                                        <f:validateLength minimum="6"/>
+                                    </h:inputSecret>
+                                </dd>
+                            </dl>
+                            <h:commandButton id="signin" value="Log In" action="#{traderManager.signIn}"/>
+                        </h:form>
+                    </div>
+                    <div id="register">
+                        <h2 class="newto">New to MockStock? Sign up.</h2>
+                        <p class="errorhome"><h:message for="firstname"/></p>
+                        <p class="errorhome"><h:message for="lastname"/></p>
+                        <p class="errorhome"><h:message for="emailsignup"/></p>
+                        <p class="errorhome"><h:message for="pwdsignup"/></p>
+                        <h:form id="signupform">
+                            <dl>
+                                <dt>
+                                    <label for="firstname">First name</label>
+                                </dt>
+                                <dd>
+                                    <h:inputText id="firstname" value="#{traderManager.firstname}">
+                                        <f:validator validatorId="mockstock.helper.FirstnameValidator" />
+                                    </h:inputText>                               
+                                </dd>
+                                <dt>
+                                    <label for="lastname">Last name</label>
+                                </dt>
+                                <dd>
+                                    <h:inputText id="lastname" value="#{traderManager.lastname}">
+                                        <f:validator validatorId="mockstock.helper.LastnameValidator" />
+                                    </h:inputText>                                    
+                                </dd>
+                                <dt>
+                                    <label for="emailsignup">Email *</label>
+                                </dt>
+                                <dd>
+                                    <h:inputText id="emailsignup" value="#{traderManager.emailsignup}">
+                                        <f:validator validatorId="mockstock.helper.EmailValidator" />
+                                    </h:inputText>
+                                </dd>
+                                <dt>
+                                    <label for="pwdsignup">Password *</label>
+                                </dt>
+                                <dd>
+                                    <h:inputSecret id="pwdsignup" value="#{traderManager.pwdsignup}">
+                                        <f:validateLength minimum="6"/>
+                                    </h:inputSecret>                                    
+                                </dd>
+                            </dl>
+                            <div class="savebutton">
+                                <h:commandButton id="signup" value="Sign Up" action="#{traderManager.addNewTrader}"/>
+                            </div>
+
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+
+            <ui:insert name="footer" >
+                <ui:include src="footer.xhtml" />
+            </ui:insert>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db
+END
+Portfolioproduct.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/Portfolioproduct.java
+END
+Trader.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/Trader.java
+END
+SPHistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/SPHistory.java
+END
+Stockproduct.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/Stockproduct.java
+END
+TraderTransaction.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/TraderTransaction.java
+END

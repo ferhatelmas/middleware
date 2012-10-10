@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/eda12g12/!svn/ver/278/MockStockModule/src/java/mockstock/ejb/front
+END
+TraderFacadeLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eda12g12/!svn/ver/278/MockStockModule/src/java/mockstock/ejb/front/TraderFacadeLocal.java
+END
+TraderFacadeRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eda12g12/!svn/ver/278/MockStockModule/src/java/mockstock/ejb/front/TraderFacadeRemote.java
+END
+TraderTransactionLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/eda12g12/!svn/ver/230/MockStockModule/src/java/mockstock/ejb/front/TraderTransactionLocal.java
+END
+AdminLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/eda12g12/!svn/ver/161/MockStockModule/src/java/mockstock/ejb/front/AdminLocal.java
+END
+TraderTransactionRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/eda12g12/!svn/ver/230/MockStockModule/src/java/mockstock/ejb/front/TraderTransactionRemote.java
+END
+AdminRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/eda12g12/!svn/ver/201/MockStockModule/src/java/mockstock/ejb/front/AdminRemote.java
+END
+AnalyticsBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eda12g12/!svn/ver/201/MockStockModule/src/java/mockstock/ejb/front/AnalyticsBeanLocal.java
+END
+AnalyticsBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eda12g12/!svn/ver/201/MockStockModule/src/java/mockstock/ejb/front/AnalyticsBeanRemote.java
+END
+TraderFacadeBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/eda12g12/!svn/ver/278/MockStockModule/src/java/mockstock/ejb/front/TraderFacadeBean.java
+END
+AnalyticsBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/ejb/front/AnalyticsBean.java
+END
+TraderTransactionBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/ejb/front/TraderTransactionBean.java
+END
+AdminBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/ejb/front/AdminBean.java
+END

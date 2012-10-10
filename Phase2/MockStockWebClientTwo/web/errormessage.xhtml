@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>MockStock.</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/design.css" />
+        <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon"/>
+    </head>
+    <body id="mockstock">
+        <div id="wrapper">
+            <ui:insert name="headersimple" >
+                <ui:include src="headersimple.xhtml" />
+            </ui:insert>
+            <div id="content">
+                <h2>Oops, an error occurred.</h2>
+                <p class="errorfull">We are sorry, that shouldn't happen. However, if this error occurs again, do not hesitate to contact us.</p>
+            </div>
+
+            <ui:insert name="footer" >
+                <ui:include src="footer.xhtml" />
+            </ui:insert>
+        </div>
+    </body>
+</html>

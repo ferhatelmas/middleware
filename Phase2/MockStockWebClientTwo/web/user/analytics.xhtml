@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <head>
+        <title>MockStock.</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/design.css" />
+        <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../js/mockstock.js"></script>
+        <script type="text/javascript" src="../js/raphael.js"></script>
+        <script type="text/javascript" src="../js/pie.js"></script>
+        <style media="screen">
+            #holder {
+                
+            }
+        </style>
+    </head>
+    <body id="mockstock">
+        <div id="wrapper">
+            <ui:insert name="header" >
+                <ui:include src="header.xhtml" />
+            </ui:insert>
+
+            <div id="content">
+                <div id="trader">
+
+
+                    <h2>Market Index</h2>
+                    <div id="analytics" style="display:none">
+                    <div class="stockproduct">
+                        <div class="stockinfo">
+                            <p class="stockindex">Sun</p>
+                            <iframe id="analyticssun" src="analyticssun.xhtml" scrolling="no" style="border-style: none; width: 100%; height: 170px;">
+                                <p>Your Browser is too dumb to show iframes.</p>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="stockproduct">
+                        <div class="stockinfo">
+                            <p class="stockindex">Apple</p>
+                            <iframe id="analyticsapple" src="analyticsapple.xhtml" scrolling="no" style="border-style: none; width: 100%; height: 170px;">
+                                <p>Your Browser is too dumb to show iframes.</p>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="stockproduct">
+                        <div class="stockinfo">
+                            <p class="stockindex">IBM</p>
+                            <iframe id="analyticsibm" src="analyticsibm.xhtml" scrolling="no" style="border-style: none; width: 100%; height: 170px;">
+                                <p>Your Browser is too dumb to show iframes.</p>
+                            </iframe>
+                        </div>
+                    </div> 
+                </div>
+                </div>
+                <div id="market">
+                    <h2>Portfolio: Shares in %</h2>
+                    <table id="portfolio">
+                        <tbody>
+                                                           <c:forEach items="#{traderManager.portfolioanalyzer}" var="portfolio">
+                                    <tr>
+                                    <th scope="row">#{portfolio.key} #{portfolio.value}%</th>
+                                    <td>#{portfolio.value}%</td>
+                                    </tr>
+                                </c:forEach>         
+                            
+                        </tbody>
+                    </table>
+                     <div id="portfolioholder"></div>       
+                </div>
+            </div>
+            <ui:insert name="footer" >
+                <ui:include src="../footer.xhtml" />
+            </ui:insert>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/ejb/backend
+END
+SingletonBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eda12g12/!svn/ver/209/MockStockModule/src/java/mockstock/ejb/backend/SingletonBeanLocal.java
+END
+SingletonBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/ejb/backend/SingletonBean.java
+END
+UpdateListenerBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/ejb/backend/UpdateListenerBean.java
+END

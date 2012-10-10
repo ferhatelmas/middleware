@@ -1,0 +1,23 @@
+/* 
+    Document   : mobile
+    Created on : May 30, 2012, 9:00:55 PM
+    Author     : Kenny Lienhard
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body {
+    width: 320px;
+    margin-top: 60px;
+}
+h1 {
+    margin-left: 5px;
+    font-family: sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+span {
+    color: #CCC !important;
+}
+

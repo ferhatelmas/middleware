@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>MockStock.</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/design.css" />
+        <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../js/mockstock.js"></script>
+    </head>
+    <body id="mockstock">
+        <div id="wrapper">
+            <ui:insert name="header" >
+                <ui:include src="header.xhtml" />
+            </ui:insert>
+
+            <div id="content">
+                <div id="trader">
+                    <div id="portfolio">
+                        <h2>Portfolio of #{traderManager.trader.firstname} #{traderManager.trader.lastname}</h2>
+                        <table cellspacing="0"><thead><tr><td class="meta">Name</td><td class="meta">Quantity</td><td class="meta">Result</td></tr></thead>
+                            <tbody>
+                                <c:forEach items="#{traderManager.portfolio}" var="portfolioproduct">
+                            <tr><td>#{portfolioproduct.stockproduct.name}</td>
+                                <td>#{portfolioproduct.quantity}</td>
+                                <td>#{portfolioproduct.stockresult}</td></tr>
+                        </c:forEach>
+                                                            </tbody>
+                        </table>
+                        <ul id="totresult">
+                            <li class="info"><span class="meta">Total result</span>
+
+                                #{traderManager.totalResult}
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="marketproducts">
+                        <h2>Available Stock Products</h2>
+                        <h:messages styleClass="errorfull"/>
+                        <c:forEach items="#{traderManager.stockproducts}" var="stockproduct">
+                            <div class="stockproduct">
+
+                                <div class="stockinfo">
+                                    <p class="stockname">#{stockproduct.value.stockName}</p>
+
+                                </div>
+
+                                <h:form>
+
+                                    <h:inputText id="quantity" value="#{traderManager.transQtty}" required="true">
+                                        <f:validateLongRange minimum = "1"/>
+                                    </h:inputText>
+                                    <h:commandButton id="buy" value="Buy" action="#{traderManager.submitBuyTransaction}">
+                                        <f:setPropertyActionListener target="#{traderManager.transStockID}" value="#{stockproduct.value.stockID}" />
+                                    </h:commandButton>
+                                    <h:commandButton id="sell" value="Sell" action="#{traderManager.submitSellTransaction}">
+                                        <f:setPropertyActionListener target="#{traderManager.transStockID}" value="#{stockproduct.value.stockID}" />
+                                    </h:commandButton>
+                                </h:form>
+                            </div>                            
+                        </c:forEach>
+                    </div>
+                </div>
+                <div id="market">
+                    <h2>Market News</h2>
+                    <div id="marketprices" style="display: block;">
+                    </div>
+                    <div id="history">
+                        <h2>Transaction History</h2>
+                        <div class="commands">
+                            <h:form>
+                                <h:commandButton id="last3trans" value="Last 3" action="#{traderManager.setTransactions}">
+                                    <f:setPropertyActionListener target="#{traderManager.allTransactions}" value="false" />
+                                </h:commandButton>
+                                <h:commandButton id="alltrans" value="All" action="#{traderManager.setTransactions}">
+                                    <f:setPropertyActionListener target="#{traderManager.allTransactions}" value="true" />
+                                </h:commandButton>
+                            </h:form>
+                        </div>
+                        <ul id="transactions">
+                            <c:forEach items="#{traderManager.traderHistory}" var="transaction">
+                                <li><p class="date">
+                                        <h:outputText value="#{transaction.actiondate}">
+                                            <f:convertDateTime dateStyle="long" type="both" />
+                                        </h:outputText>
+                                    </p>
+                                    <p class="transaction">
+                                        <c:if test="#{transaction.type eq 'BUY'}">
+                                        Bought
+                                        </c:if>
+                                        <c:if test="#{transaction.type eq 'SELL'}">
+                                        Sold
+                                        </c:if>
+                                         #{transaction.quantitiy} stocks of
+                                        #{transaction.sphistory.stockproduct.name} at #{transaction.sphistory.price}</p></li>
+                            </c:forEach>
+                        </ul>
+                    </div>
+                    <div id="tweets">
+                        <h2>@FinancialTimes</h2>
+                        <div id="gettweets"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            <ui:insert name="footer" >
+                <ui:include src="../footer.xhtml" />
+            </ui:insert>
+        </div>
+    </body>
+</html>

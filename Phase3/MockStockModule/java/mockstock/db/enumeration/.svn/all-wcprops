@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/enumeration
+END
+TransactionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/enumeration/TransactionType.java
+END
+UserRight.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/enumeration/UserRight.java
+END
+UserStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eda12g12/!svn/ver/275/MockStockModule/src/java/mockstock/db/enumeration/UserStatus.java
+END

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>MockStock Admin.</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/design.css" />
+        <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../js/mockstockadm.js"></script>
+    </head>
+    <body id="mockstock">
+        <div id="wrapper">
+            <ui:insert name="headeradmin" >
+                <ui:include src="headeradmin.xhtml" />
+            </ui:insert>
+
+            <div id="content">
+                <div id="edittrader">
+                    <h2>Edit trader</h2>
+<h:messages errorClass="errorform" infoClass="success"/>
+                    <h:form id="edittraderform">
+                        <dl>
+                            <dt>
+                                <label for="firstname">First name</label>
+                            </dt>
+                            <dd>
+                                <h:inputText id="firstname" value="#{adminManager.editedFirstname}">
+                                    <f:validator validatorId="mockstock.helper.FirstnameValidator" />
+                                </h:inputText>
+                            </dd>
+                            <dt>
+                                <label for="firstname">Last name</label>
+                            </dt>
+                            <dd>
+                                <h:inputText id="lastname" value="#{adminManager.editedLastname}">
+                                    <f:validator validatorId="mockstock.helper.LastnameValidator" />
+                                </h:inputText>
+                            </dd>
+                            <dt>
+                                <label for="email">Email *</label>
+                            </dt>
+                            <dd>
+                                <h:inputText id="email" value="#{adminManager.editedEmail}">
+                                    <f:validator validatorId="mockstock.helper.EmailValidator" />
+                                </h:inputText>
+                            </dd>
+                            <dt>
+                                <label for="newpassword">Set new password</label>
+                            </dt>
+                            <dd>
+                                <h:inputSecret id="newpassword" value="#{adminManager.editedPassword}" />
+                            </dd>
+                            <dt>
+                                <label for="status">Account Status *</label>
+                            </dt>
+                            <dd class="radiobutton">
+                                <h:selectOneRadio id="status" value="#{adminManager.editedStatus}" >
+                                    <f:selectItem itemValue="ACTIVATED" itemLabel="Activated" />
+                                    <f:selectItem itemValue="DISABLED" itemLabel="Disabled" /> 
+                                    <f:selectItem itemValue="NOT_ACTIVE" itemLabel="Not active" /> 
+                                </h:selectOneRadio>                         
+                            </dd>
+                            <dt>
+                                <label for="usrgroup">User Group *</label>
+                            </dt>
+                            <dd class="radiobutton">
+                                <h:selectOneRadio id="usrgroup" value="#{adminManager.editedRights}" >
+                                    <f:selectItem itemValue="ADMIN" itemLabel="Admin" />
+                                    <f:selectItem itemValue="USER" itemLabel="User" /> 
+                                </h:selectOneRadio>                            
+                            </dd> 
+                        </dl>
+                        <div id="edittraderbuttons">
+                            <div class="savebutton">
+                                <h:commandButton id="save" value="Save changes" action="#{adminManager.saveChangesForTrader}"/>
+                            </div>
+                            <div class="deletebutton">
+                                <h:commandButton id="delete" value="Delete trader" action="#{adminManager.deleteTrader}"/>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+            <ui:insert name="footer" >
+                <ui:include src="../footer.xhtml" />
+            </ui:insert>
+        </div>
+    </body>
+</html>

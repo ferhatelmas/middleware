@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <head>
+        <title>MockStock Index Sun</title>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../js/raphael.js"></script>
+        <script type="text/javascript" src="../js/popup.js"></script>
+        <script type="text/javascript" src="../js/analyticsmobile.js"></script>
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/mobile.css" />
+    </head>
+    <body id="mockstock">
+        <h1>Sun Inc. <span>SUN</span></h1>
+        <table id="data">
+            <tfoot>
+                <tr>                   
+                    <c:forEach items="#{analyticsManager.sunPrices}" var="history">
+                        <th><h:outputText value="#{history.historyDate}">
+                                <f:convertDateTime dateStyle="long" type="both" />
+                            </h:outputText></th>
+                    </c:forEach>              
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <c:forEach items="#{analyticsManager.sunPrices}" var="history">
+                        <td>#{history.price}</td>
+                    </c:forEach>
+                </tr>
+            </tbody>
+        </table>
+        <div id="holder"></div>
+    </body>
+</html>

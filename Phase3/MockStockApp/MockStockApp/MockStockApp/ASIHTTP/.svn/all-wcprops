@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/eda12g12/!svn/ver/444/MockStockApp/MockStockApp/MockStockApp/ASIHTTP
+END
+ASIHTTPRequestDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/eda12g12/!svn/ver/444/MockStockApp/MockStockApp/MockStockApp/ASIHTTP/ASIHTTPRequestDelegate.h
+END
+ASIFormDataRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/eda12g12/!svn/ver/444/MockStockApp/MockStockApp/MockStockApp/ASIHTTP/ASIFormDataRequest.h
+END
+ASIHTTPRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/eda12g12/!svn/ver/444/MockStockApp/MockStockApp/MockStockApp/ASIHTTP/ASIHTTPRequest.h
+END
+ASICacheDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/eda12g12/!svn/ver/444/MockStockApp/MockStockApp/MockStockApp/ASIHTTP/ASICacheDelegate.h
+END
+ASIHTTPRequestConfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/eda12g12/!svn/ver/444/MockStockApp/MockStockApp/MockStockApp/ASIHTTP/ASIHTTPRequestConfig.h
+END
+ASIProgressDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/eda12g12/!svn/ver/444/MockStockApp/MockStockApp/MockStockApp/ASIHTTP/ASIProgressDelegate.h
+END

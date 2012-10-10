@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://java.sun.com/jsf/core"> 
+    <head>
+        <title>MockStock Admin.</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/design.css" />
+        <link rel="stylesheet" media="screen" type="text/css" href="../css/tablesorter.css" />
+        <link rel="shortcut icon" href="../img/fav.ico" type="image/x-icon"/>
+        <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="../js/mockstockadm.js"></script>
+        <script type="text/javascript" src="../js/tablesorter.min.js"></script>
+    </head>
+    <body id="mockstock">
+        <div id="wrapper">
+            <ui:insert name="headeradmin" >
+                <ui:include src="headeradmin.xhtml" />
+            </ui:insert>
+
+            <div id="content">
+                <div id="edittraders">
+                    <h2>Edit existing user</h2>
+<h:messages errorClass="errorfull" infoClass="successfull"/>
+<table id="userList" class="tablesorter"> 
+                        <thead> 
+                            <tr> 
+                                <th>Last Name</th> 
+                                <th>First Name</th> 
+                                <th>Email</th> 
+                                <th>Rights</th> 
+                                <th>Status</th>
+                                <th>Edit user</th> 
+                            </tr> 
+                        </thead> 
+                        <tbody>
+                            <c:forEach items="#{adminManager.traders}" var="trader">
+                                <tr> 
+                                    <td>#{trader.lastname}</td> 
+                                    <td>#{trader.firstname}</td> 
+                                    <td>#{trader.email}</td> 
+                                    <td>#{trader.usrgroup}</td> 
+                                    <td>#{trader.status}</td>
+                                    <td class="edit">
+                                        <h:form>
+
+                                            <h:commandButton action="#{adminManager.editTrader}" value="Edit">
+                                                <f:setPropertyActionListener target="#{adminManager.idOfTraderToEdit}" value="#{trader.id}" />
+                                            </h:commandButton>
+
+                                        </h:form>
+
+
+
+                                    </td>
+                                </tr> 
+                            </c:forEach>
+                        </tbody> 
+                    </table>
+                </div>
+
+            </div>
+            <ui:insert name="footer" >
+                <ui:include src="../footer.xhtml" />
+            </ui:insert>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,502 @@
+@charset "UTF-8";
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size:100%;
+    font-style: normal;
+}
+li {
+    list-style:none;
+}
+/* EDA Group 12, Design by Kenny Lienhard */
+#wrapper {
+    margin:auto;
+    width:960px;
+}
+#header, #adminheader {
+    margin-top:50px;
+    margin-bottom:40px;
+    padding-bottom:15px;
+}
+#header input[type=submit], #adminheader input[type=submit] {
+    background: #FFF;
+    border: none;
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 100%;
+    margin-bottom: 0px;
+    padding: 0px;
+    width: auto;
+}
+#adminheader input[type=submit] {
+    margin-left: 0px;
+}
+#header input[type=submit] {
+    margin-top: 13px;
+    margin-left: 30px;
+    float: right;
+}
+#adminheader ul {
+    float: left;
+    margin-left: 80px;
+    margin-bottom: 23px;
+}
+#adminheader li {
+    line-height: 150%;
+}
+#adminheader li.title {
+    margin-bottom:5px;
+}
+#logo {
+    background:url(../img/stock.png) no-repeat;
+    padding-left:120px;
+    padding-top:28px;
+}
+h1 {
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-size:200%;
+    font-weight:normal;
+}
+#header h1, #adminheader h1 {
+    float: left;
+}
+#adminheader h1 {
+    margin-top: 37px;
+}
+h2 {
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-size:150%;
+    font-weight:normal;
+    color:#E12300;
+    margin-bottom:30px;
+}
+h2.newto {
+    border-top:thin #CCC solid;
+    clear: right;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 130%;   
+}
+p {
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-size:100%;
+    line-height: 142%;
+}
+p.stockindex {
+    font-size: 120%;
+}
+.error, .success {
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 443px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+.successfull {
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    background: #69A74E;
+}
+.errorfull {
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    background: #E12300;
+}
+.errorhome {
+    color: white;
+    margin-bottom: 15px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    background: #E12300;
+}
+.success {
+    background: #69A74E;
+}
+.error {
+    background: #E12300;
+}
+a {
+    font-family:Georgia, "Times New Roman", Times, serif;
+    font-size:100%;
+    color: #000;
+}
+#header .nav {
+    color: #000;
+    text-decoration: none;
+    float: right;
+}
+#adminheader .nav {
+    color: #000;
+    text-decoration: none;
+}
+#header a.nav:hover, #adminheader .nav:hover,  #header input:hover, #adminheader input:hover{
+    text-decoration: underline;
+}
+#header a.nav {
+    margin-top: 13px;
+    margin-left: 30px;
+}
+a:hover {
+    text-decoration: none;
+}
+.activeadm {
+    position: absolute;
+    margin-left: -15px;
+}
+.errorform {
+    background:#E12300;
+    color:#FFF;
+    margin-bottom:15px;
+    width:100%;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+li.errorform, span.erroradmform {
+    display: block;
+    padding: 10px;
+}
+.erroradmform {
+    background:#E12300;
+    color:#FFF;
+    margin-bottom:15px;
+    width:100%;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+    width: 447px;
+}
+#content {
+    min-height: 600px;
+    clear: both;
+    padding-top: 15px;
+    border-top:thin #CCC solid;
+}
+#trader {
+    float: left;
+    margin-top: 15px;
+    width:530px;
+}
+#marketproducts {
+    clear: left;
+    margin-top: 70px;
+}
+#portfolio tbody tr {
+    height: 40px;
+
+}
+#portfolio tbody td {
+    width: 180px;
+    border-bottom:thin #CCC solid;
+}
+#portfolio thead td {
+    width: 180px;
+}
+#history {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#history h2, #tweets h2 {
+    margin-bottom: 15px;
+}
+#history li {
+    margin-top: 10px;
+}
+#tweets {
+    margin-bottom: 20px;
+}
+#tweets a {
+    text-decoration: none;
+}
+#tweets a:hover {
+    text-decoration: underline;
+}
+p.date {
+    color: gray;
+    font-size: 89%;
+    margin-bottom: 2px;
+}
+#settings {
+    margin-top: 15px;
+    float:left;
+    width:433px;
+    margin-bottom: 30px;
+}
+#welcomeimg {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    float: left;
+    width: 600px;
+}
+#edittraders {
+    margin-top: 15px;
+    clear: both;
+}
+#edittrader {
+    margin-top: 15px;
+}
+#login {
+    margin-top: 15px;
+    margin-bottom: 170px;
+}
+#market {
+    margin-top: 15px;
+    float:right;
+    width:300px;
+}
+#home {
+    float:right;
+    width:300px;
+}
+#marketprices {
+    min-height: 150px;
+    display: none;
+    margin-bottom: 30px;
+}
+#marketprices table {
+    width: 300px;
+}
+#marketprices table {
+    background-color: #F7F7F7;
+    padding: 10px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+#marketprices tr {
+    line-height: 400%;
+}
+#marketprices td {
+    line-height:170%;
+    padding-right:40px;
+    padding-bottom: 10px;
+}
+#marketprices td.difference {
+    padding-right: 0px;
+}
+dt {
+    float: left;
+    clear: left;
+    width: 90px;
+    padding-top: 8px;
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    font-size:85%;
+    font-weight: bold;
+}
+#settings dt {
+    width: 125px;
+}
+#edittrader dt {
+    width: 150px;
+}
+#settings input {
+    width: 295px;
+}
+dd {
+    float: left;
+}
+#test {
+    clear: left;
+}
+dd.radiobutton {
+    padding-top: 5px;
+}
+dd.radiobutton label {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    font-size:90%;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+dd.radiobutton td {
+    margin-right: 30px;
+}
+#edittraderbuttons {
+    padding-top: 20px;
+    clear:left;
+    margin-left: 306px;
+}
+a.goback {
+    display: block;
+    float: left;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+}
+#edittraderbuttons input[type=submit] {
+    width: 150px;
+}
+#market input, #home input {
+    width: 195px;
+}
+#market input[type=submit], #home input[type=submit] {
+    float:right;
+    width: 100px;
+}
+#settings input[type=submit] {
+    float:right;
+    width: 150px;
+    margin-top: 15px;
+}
+input, a.goback {
+    width:300px;
+    margin-bottom:15px;
+    padding:7px 5px;
+    border:thin solid #000;
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    font-size:85%;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+#market .commands input[type=submit] {
+    float: none;
+    background:#000;
+    color: #FFF;
+    width: 80px;
+    text-align: center;
+    margin-right: 10px !important;
+    margin-left: 0px;
+}
+#transactions {
+    clear: left;
+}
+#gettweets li {
+    margin-top: 10px;
+}
+#gettweets {
+    min-height: 130px;
+}
+#edittraders input[type=submit] {
+    margin: 0px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 9pt;
+}
+#edittrader input[type=radio] {
+    width: auto;
+}
+table.tablesorter tbody td.edit {
+    padding-left: 8px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+}
+input[type=submit], a.setstockprices, a.goback {
+    margin-left:5px;
+    background:#F7F7F7;
+    font-weight:bold;
+    width:100px;
+    cursor:pointer;
+    margin-right:0px !important;
+}
+.savebutton input[type=submit] {
+    background-color: #69A74E;
+    border-color:#3B6E22;
+    color: #FFF;
+}
+.deletebutton input[type=submit] {
+    background-color: #E12300;
+    color: #FFF;
+    border-color: #b94848;
+}
+.stockproduct {
+    padding-bottom:10px;
+    border-bottom:thin #CCC solid;
+}
+.stockproduct ul {
+    margin-top:15px;
+}
+.stockproduct ul li.info {
+    float:left;
+    min-width:100px;
+}
+.stockproduct form {
+    clear:left;
+    margin-top: 15px;
+}
+.stockproduct input {
+    width:100px;
+    margin-right:30px;
+}
+.stockinfo {
+    margin-top:15px;
+}
+.meta {
+    font-size:80%;
+    color:#E12300;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:2px;
+}
+span.meta {
+    display: block;
+}
+.pstockname {
+    font-size:80%;
+    color:#000;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    width: 150px;
+    font-size: 120%;
+    margin-top: 15px;   
+}
+p.stockname {
+    font-size:80%;
+    color:#000;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    width: 150px;
+    font-size: 120%;
+}
+li.info {
+    margin-bottom:20px;
+    width:150px;
+}
+#totresult {
+    margin-top: 20px;
+    margin-left: 355px;
+}
+#footer {
+    clear:both;
+    margin-top:30px;
+    padding-top:25px;
+    border-top:thin #CCC solid;
+    margin-bottom:15px;
+}
+#footer p {
+    margin-top:2px;
+    display:block;
+    font-size:80%;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:2px;
+}
+#holder {
+    display: block;
+    min-height: 500px;
+}
+#portfolioholder {
+    display: block;
+    width: 700px;
+    min-height: 700px;
+}
